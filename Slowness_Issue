@@ -1,0 +1,24 @@
+Can you collect data from the API?
+
+$ oc adm top nodes
+
+$ oc adm top pods
+
+$ oc get pod <Pod_Name> -o yaml > pod_yaml.txt
+
+$ oc describe <Pod_Name> > pod_desc.txt
+
+$ oc get pods -A -o wide 
+
+$ oc get all
+
+# curl -kvv https://10.194.30.163:5000/readiness
+# curl -kvv http://10.194.30.163:5000/health
+
+Do you experience this slowness in all environments? Just one?
+
+Please collect curl -o /dev/null -s -w 'Total: %{time_total}s\ntime_connect:  %{time_connect}s\n' <console-url>
+
+[+] Try to delete the failing pod/ low in perf pod and check if it runs successfully or not.
+
+Let me know if you have any questions, I will be happy to assist you with it.
