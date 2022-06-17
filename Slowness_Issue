@@ -22,3 +22,17 @@ Please collect curl -o /dev/null -s -w 'Total: %{time_total}s\ntime_connect:  %{
 [+] Try to delete the failing pod/ low in perf pod and check if it runs successfully or not.
 
 Let me know if you have any questions, I will be happy to assist you with it.
+
+
+The following will collect your etcd metrics for evaluation
+
+~~~
+oc project openshift-etcd
+for pod in $(oc get pods -n openshift-etcd -l app=etcd -oname); do
+ echo "----- $pod -----"
+ oc exec $pod -c etcd -- etcdctl endpoint status -w table
+ oc exec $pod -c etcd -- etcdctl endpoint status -w json
+done
+~~~
+
+Let me know if you have any trouble collecting this information.
