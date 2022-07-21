@@ -1,0 +1,61 @@
+
+
+ssh to linux (Public IP)
+
+1. sudo su -
+
+2. yum install httpd -y  
+
+3. systemctl start httpd (Basic Apache page)
+
+4. Downlaod the app from online 
+
+5. Yoga ------------------------> 
+
+6. cd /var/www/html
+
+Download the website
+-----
+
+7. wget https://www.free-css.com/assets/files/free-css-templates/download/page280/sungla.zip
+
+8. unzip sungla.zip
+
+-------------------------------------
+
+
+  221  who
+  222  whoamiu
+  223  whomai
+  224  w
+  225  whoami
+  226  who
+  227  yum install httpd -y
+  228  systemctl status httpd 
+  229  systemctl start httpd 
+  230  ls -l
+  231  cd /var/www/html/
+  232  ls -ltr
+  233  pwd
+  234  wget https://www.free-css.com/assets/files/free-css-templates/download/page280/sungla.zip
+  235  ls -l
+  236  unzip sungla.zip 
+  237  ls -l
+  238  ls
+  239  cd html/
+  240  ls
+  241  ls -l
+  242  cd ..
+  243  pwd
+  244  ls -l
+  245  rm -rf go-tours
+  246  rm -rf go-tours.zip
+  247  rm -rf sungla.zip 
+  248  ls -ltr
+  249  mv html sunglass
+  250  ls -l
+  251  cd sunglass/
+  252  ls -l
+  253  history 
+  
+  ------------------------------
