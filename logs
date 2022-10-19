@@ -1,0 +1,1 @@
+journactl --no-pager | egrep 'systemd.*? (ovsdb-server|openvswitch|ovs-configuration|ovs-vswitchd).service'
