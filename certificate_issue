@@ -1,0 +1,142 @@
+[root@master-0 ~]# history
+    1  systemctl status atomic-openshift-node.service
+    2  cd /etc/kubernetes/manifests/
+    3  ll
+    4  cd ..
+    5  ll
+    6  ll manifests/
+    7  ls -l /etc/origin/master/
+    8  cd /etc/origin/
+    9  ll
+   10  ll master/
+   11  ll node/
+   12  ll node/pods/
+   13  pwd
+   14  ll
+   15  cd
+   16  ll
+   17  ll /etc/etcd/
+   18  oc get nodes
+   19  openssl s_client -connect www.googlr.com:443
+   20  openssl s_client -connect www.google.com:443
+   21  oc getnodes
+   22  oc get nodes
+   23  cd /etc/origin/master/
+   24  ls
+   25  openssl x509 -in admin.crt -text
+   26  tput reset
+   27  openssl x509 -in admin.crt -text
+   28  openssl x509 -in master.server.crt -text
+   29  openssl x509 -in openshift-router.crt -text
+   30  man x509
+   31  man x509v3_config
+   32  ls
+   33  openssl x509 -in ca.crt -text
+   34  openssl x509 -in /etc/etcd/ca.crt -text
+   35  ls
+   36  openssl x509 -in service-signer.crt -text
+   37  openssl x509 -in admin.crt -text
+   38  openssl x509 -in master.server.crt -text
+   39  vi master-config.yaml
+   40  ls
+   41  less master-config.yaml
+   42  less admin.kubeconfig
+   43  less master-config.yaml
+   44  cd /etc/etcd/
+   45  ls
+   46  less etcd.conf
+   47  openssl -in peer.key -text
+   48  openssl x509 -in peer.key -text
+   49  openssl x509 -in peer.crt -text
+   50  openssl x509 -in server.crt -text
+   51  ls
+   52  lw
+   53  ls
+   54  #oc adm ca create-server-cert --signer-cert=ca.crt --signer-key=ca.key --signer-serial=/etc/origin/master/ca.serial.txt --hostnames='external.example.com,internal.example.com,master-1.example.com,kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster.local,openshift,10.74.249.116,172.30.0.1' --cert=/etc/origin/master/master.server.crt  --key=/etc/origin/master/master.server.key
+   55  hostname
+   56  hostname -i
+   57  oc adm ca create-server-cert --signer-cert=ca.crt --signer-key=ca.key --signer-serial=/etc/origin/master/ca.serial.txt --hostnames='master-0.sharedocp311cns.lab.upshift.rdu2.redhat.com,10.0.93.216' --cert=dr.server.crt  --key=dr.server.key
+   58  ls
+   59  ls ca
+   60  oc adm ca create-server-cert --signer-cert=ca/ca.crt --signer-key=ca/ca.key --signer-serial=/etc/origin/master/ca.serial.txt --hostnames='master-0.sharedocp311cns.lab.upshift.rdu2.redhat.com,10.0.93.216' --cert=dr.server.crt  --key=dr.server.key
+   61  ls
+   62  openssl x509 -in dr.server.crt -text  
+   63  cd /etc/origin/node/+
+   64  cd /etc/origin/node/
+   65  ls
+   66  cd certificates/
+   67  ls
+   68  openssl x509 -in  kubelet-client-current.pem -text
+   69  openssl x509 -in  kubelet-server-current.pem  -text
+   70  oc get secret router-certs -n default -o jsonpath='{.data.tls\.crt}' | base64 -d | openssl x509 -text -noout
+   71  oc get secret registry-certs -n default -o jsonpath='{.data.tls\.crt}' | base64 -d | openssl x509 -text -noout
+   72  oc get secret
+   73  oc get secret registry-certificates -n default -o jsonpath='{.data.tls\.crt}' | base64 -d | openssl x509 -text -noout
+   74  oc get secret registry-certificates -n default -o jsonpath='{.data.tls\.crt}'
+   75  oc get secret registry-certificates -n default -oyaml'
+   76  oc get secret registry-certificates -n default -oyaml
+   77  oc get secret registry-certificates -n default -o jsonpath='{.data.registry\.crt}' | base64 -d | openssl x509 -text -noout
+   78  oc get svc
+   79  oc get secret router-certs -n default -o jsonpath='{.data.tls\.crt}' | base64 -d | openssl x509 -text -noout
+   80  ls
+   81  cd ..
+   82  ls
+   83  less node-config.yaml
+   84  openssl x509 -in  certificates/kubelet-client-current.pem -text
+   85  less node-config.yaml
+   86  oc project openshift-web-console
+   87  oc get svc
+   88  oc get secret
+   89  oc get svc -oyaml
+   90  oc delete secret webconsole-serving-cert
+   91  oc get secret
+   92  oc describe dc
+   93  oc get all
+   94  oc describe deployment.apps/webconsole
+   95  oc rsh webconsole-85494cdb8c-s477v
+   96  vi /etc/origin/master/master-config.yaml
+   97  oc get pods
+   98  oc project default
+   99  oc get pods
+  100  oc rsh docker-registry-1-pb57h
+  101  oc adm policy add-cluster-role-to-user cluster-admin quicklab
+  102  oc login -u quicklab
+  103  docker login
+  104  openssl x509 -in /etc/origin/master/registry.crt
+  105  openssl x509 -in /etc/origin/master/registry.crt  -text
+  106  docker login docker-registry.default.svc:500 -u quicklab -p `oc whoami -t`
+  107  docker login docker-registry.default.svc:5000 -u quicklab -p `oc whoami -t`
+  108  docker pull busybox
+  109  docker pull centos
+  110  docker image
+  111  docker images
+  112  docker tag registry.redhat.io/openshift3/ose-node:v3.11 docker-registry.default.svc:5000/default/xyz:123
+  113  docker push docker-registry.default.svc:5000/default/xyz:123
+  114  oc get is
+  115  oc get is -oyaml
+  116  ls
+  117  oc get pods
+  118  oc rsh docker-registry-1-pb57h
+  119  ls
+  120  oc describe is
+  121  ls /etc/containers/
+  122  less /etc/containers/registries.conf
+  123  less /etc/containers/certs.d/
+  124  docker login docker-registry.default.svc:5000 -u quicklab -p `oc whoami -t`
+  125  docker login https://docker-registry.default.svc:5000 -u quicklab -p `oc whoami -t`
+  126  oc get route
+  127  docker login https://docker-registry-default.apps.sharedocp311cns.lab.upshift.rdu2.redhat.com -u quicklab -p `oc whoami -t`
+  128  ls /etc/docker/certs.d/
+  129  cd /etc/docker/
+  130  cd certs.d/
+  131  mkdir docker-registry-default.apps.sharedocp311cns.lab.upshift.rdu2.redhat.com
+  132  cp docker-registry.default.svc\:5000/node-client-ca.crt docker-registry-default.apps.sharedocp311cns.lab.upshift.rdu2.redhat.com
+  133  cd
+  134  docker login https://docker-registry-default.apps.sharedocp311cns.lab.upshift.rdu2.redhat.com -u quicklab -p `oc whoami -t`
+  135  ls /etc/docker/certs.d/
+  136  openssl x509 -in docker-registry.default.svc\:5000/node-client-ca.crt -text  
+  137  openssl x509 -in /etc/docker/certs.d/docker-registry.default.svc\:5000/node-client-ca.crt -text  
+  138  ls /etc/pki/ca-trust/source/anchors/
+  139  oc get secret router-certs -n default -o jsonpath='{.data.tls\.crt}' | base64 -d | openssl x509 -text -noout
+  140  date
+  141  history
