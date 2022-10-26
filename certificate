@@ -1,0 +1,1 @@
+while true; do oc get csr|grep Pending|awk '{print $1}'|xargs oc adm certificate approve;done
